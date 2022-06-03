@@ -1,11 +1,12 @@
 
 <%-include("partials/header.ejs")%>
-<%-include("partials/navbarhome.ejs")%>
+
 
 <body>
+    <%-include("partials/navbarhome.ejs")%>
     <div class="container">
         <br>
-        <div class="card">
+        <div class="card top-card">
             <div class="card-body">
                 <h1>Olá, seja bem vindo ao AskCode!</h1>
                 <br>
@@ -16,20 +17,26 @@
                 <br>
                 <a href="" class="btn btn-dark">Publique seu primeiro artigo</a>
             </div>
-            
-            
         </div>
+        <h2>Artigos</h2>
         <%articles.forEach(article => {%>
             <hr>
            <div class="card">
                <div class="card-header">
-                   <h3><%=article.title%></h3>
+                   <h4><%=article.title%></h4>
                </div>
                <div class="card-body">
-                   <a class="btn btn-dark">Ler artigo</a>
+                   <a href="/<%=article.slug%>" class="btn btn-dark">Ler artigo</a>
                </div>
            </div> 
         <%})%>
+        <br>
+        <div class="row">
+            <div class="col col-12">
+                <a style="float:right" href="/articles/page/2">Próxima página >>></a>
+            </div>
+        </div>
+        <br>
     </div>
     <br>
 </body>
