@@ -1,0 +1,38 @@
+
+<%-include("partials/header.ejs")%>
+<%-include("partials/navbarhome.ejs")%>
+
+<body>
+    <div class="container">
+        <br>
+        <div class="card">
+            <div class="card-body">
+                <h1>Olá, seja bem vindo ao AskCode!</h1>
+                <br>
+                <ul>
+                    <li>Este é um blog para compartilhamento de conteúdo Tech.</li>
+                    <li> Fique a vontade para fazer suas publicações, sempre lembrando de respeitar a todos.</li>
+                </ul>
+                <br>
+                <a href="" class="btn btn-dark">Publique seu primeiro artigo</a>
+            </div>
+            
+            
+        </div>
+        <%articles.forEach(article => {%>
+            <hr>
+           <div class="card">
+               <div class="card-header">
+                   <h3><%=article.title%></h3>
+               </div>
+               <div class="card-body">
+                   <a class="btn btn-dark">Ler artigo</a>
+               </div>
+           </div> 
+        <%})%>
+    </div>
+    <br>
+</body>
+
+
+<%-include("partials/footer.ejs")%>
