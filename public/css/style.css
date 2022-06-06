@@ -8,3 +8,8 @@ body{
     background-color: rgb(231, 231, 231);
 }
 
+.nav-link{
+    border-left: 1px rgb(155, 155, 155) solid;
+    padding: 3px;
+}
+

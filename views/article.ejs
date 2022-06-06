@@ -14,6 +14,25 @@
                <%-article.body%>
            </div>
        </div>
+       <br>
+       <form action="/responder" method="POST">
+           <h4>Respostas</h4>
+           <hr>
+           <%respostas.forEach(resposta =>{%>
+                <div class="card">
+                    <div class="card-body">
+                        <%=resposta.conteudo%>
+                    </div>
+                </div>
+                <br>
+           <%})%>
+           <hr>
+           <label><h5>Responda:</h5></label>
+           <textarea name="conteudo" placeholder="Sua resposta" class="form-control"></textarea>
+           <br>
+           <input type="hidden" name="articleSlug" value="<%=article.slug%>">
+           <button type="submit" class="btn btn-primary">Responder</button>
+       </form>
     </div>
     <br>
 </body>
